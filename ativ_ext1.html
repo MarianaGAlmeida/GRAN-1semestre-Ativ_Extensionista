@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" name="viewport"/><meta content="mobile_tab" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&amp;display=swap" rel="stylesheet"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config = { darkMode: "class", theme: { extend: { colors: { "secondary": "#006c4e", "on-primary": "#ffffff", "tertiary-fixed-dim": "#ffb95f", "outline": "#6c7a71", "inverse-surface": "#283044", "on-error-container": "#93000a", "on-primary-container": "#00422b", "primary-fixed": "#6ffbbe", "inverse-on-surface": "#eef0ff", "on-secondary-fixed": "#002115", "secondary-fixed": "#97f5cc", "on-secondary-fixed-variant": "#00513a", "surface-container-highest": "#dae2fd", "tertiary": "#855300", "surface": "#faf8ff", "on-tertiary-fixed-variant": "#653e00", "on-primary-fixed-variant": "#005236", "surface-container": "#eaedff", "on-secondary-container": "#007353", "surface-bright": "#faf8ff", "secondary-container": "#97f5cc", "surface-dim": "#d2d9f4", "on-error": "#ffffff", "on-surface": "#131b2e", "background": "#faf8ff", "tertiary-container": "#e29100", "on-tertiary": "#ffffff", "surface-container-high": "#e2e7ff", "tertiary-fixed": "#ffddb8", "on-surface-variant": "#3c4a42", "error": "#ba1a1a", "on-primary-fixed": "#002113", "on-secondary": "#ffffff", "on-tertiary-container": "#523200", "error-container": "#ffdad6", "surface-variant": "#dae2fd", "surface-container-low": "#f2f3ff", "on-tertiary-fixed": "#2a1700", "on-background": "#131b2e", "surface-tint": "#006c49", "surface-container-lowest": "#ffffff", "primary-fixed-dim": "#4edea3", "inverse-primary": "#4edea3", "primary-container": "#10b981", "primary": "#006c49", "secondary-fixed-dim": "#7bd8b1", "outline-variant": "#bbcabf" }, borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" }, spacing: { "margin": "1rem", "gutter-lg": "1.5rem", "margin-md": "1.5rem", "space-md": "1rem", "gutter-sm": "0.75rem", "margin-lg": "2rem", "space-xl": "2rem", "space-xs": "0.25rem", "gutter": "1rem", "space-sm": "0.5rem", "space-lg": "1.5rem" }, fontFamily: { "headline-xl-mobile": ["Plus Jakarta Sans"], "body-sm": ["Plus Jakarta Sans"], "headline-xl": ["Plus Jakarta Sans"], "label-lg": ["Plus Jakarta Sans"], "body-md": ["Plus Jakarta Sans"], "label-md": ["Plus Jakarta Sans"], "label-sm": ["Plus Jakarta Sans"], "stat-counter": ["Plus Jakarta Sans"], "headline-md": ["Plus Jakarta Sans"], "headline-sm": ["Plus Jakarta Sans"], "body-lg": ["Plus Jakarta Sans"], "headline-lg-mobile": ["Plus Jakarta Sans"], "headline-lg": ["Plus Jakarta Sans"] }, fontSize: { "headline-xl-mobile": ["30px", { lineHeight: "36px", fontWeight: "800" }], "body-sm": ["12px", { lineHeight: "16px", fontWeight: "400" }], "headline-xl": ["40px", { lineHeight: "48px", fontWeight: "800" }], "label-lg": ["16px", { lineHeight: "20px", fontWeight: "700" }], "body-md": ["14px", { lineHeight: "20px", fontWeight: "400" }], "label-md": ["13px", { lineHeight: "18px", fontWeight: "600" }], "label-sm": ["11px", { lineHeight: "14px", fontWeight: "700" }], "stat-counter": ["28px", { lineHeight: "32px", fontWeight: "800" }], "headline-md": ["22px", { lineHeight: "28px", fontWeight: "700" }], "headline-sm": ["18px", { lineHeight: "24px", fontWeight: "700" }], "body-lg": ["16px", { lineHeight: "24px", fontWeight: "400" }], "headline-lg-mobile": ["24px", { lineHeight: "32px", fontWeight: "700" }], "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "700" }] } } } };</script><style>@layer base{html,body{width:100vw;margin:0;padding:0;}body{overscroll-behavior:none;font-family:"Plus Jakarta Sans",sans-serif;}.pb-safe{padding-bottom:env(safe-area-inset-bottom,0px);}.pt-safe{padding-top:env(safe-area-inset-top,0px);}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}.material-symbols-outlined{font-variation-settings:"FILL" 0,"wght" 500,"GRAD" 0,"opsz" 24;}</style><style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head><body class="bg-surface text-on-surface flex flex-col antialiased min-h-screen"><header class="fixed top-0 w-full z-50 pt-safe bg-surface/85 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]"><div class="h-20 px-margin flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="EcoQuiz Cidades Logo" class="h-8 w-auto object-contain shrink-0" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6Vqpid4hRro3Hf-XH4uTGGC0msRG_Su8z00NyvkQuXHLNlGgQ6BdRDUN1XF2mZhCLHUuo-LeYzHy69By2Bxijavl4XGeDTKs7BdU82c6l869IpmFmTWikSunEAWd_YcjMZX-db_w96rjwoULCy16gTGXpKSGPFX4UgC57z24src9oBRDfZOsmf1msA__GdIAsQ_uGssvrs_hmHBqSvio5TeSkNJXrmkaAkOo3zfgHk8T6XsFfqAPe"/><div class="flex flex-col min-w-0"><div class="flex items-center gap-space-xs"><span class="font-label-sm text-label-sm text-secondary uppercase tracking-wider truncate">Guia Eco</span></div><span class="font-label-md text-label-md text-on-surface flex items-center gap-space-xs"><span class="truncate">Curitiba, PR</span><span class="shrink-0">🌿</span></span></div></div><div class="flex items-center gap-space-sm shrink-0"><div class="flex items-center gap-space-xs bg-tertiary-fixed/40 px-space-sm py-1 rounded-full"><span class="text-tertiary font-label-sm text-label-sm flex items-center gap-0.5">🔥 5d</span><span class="text-on-surface-variant font-body-sm text-body-sm opacity-50">|</span><span class="font-label-sm text-label-sm text-tertiary font-bold">1.450 pts</span></div><button aria-label="Perfil" class="relative flex items-center justify-center p-0.5 rounded-full hover:opacity-90 active:scale-95 transition-transform min-w-[44px] min-h-[44px]"><img alt="Profile" class="w-8 h-8 rounded-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD6vm1JZC45fWm1poO343WLngD27Mg97qE6KjEk02ii581jRa2DR4j-L7KXuGP3nPJq9gwfiy1BkkcG_I7rwOMOXyCLRXsblEg1nQias6Wo0MM13DSb0J-gSwLi9gH3oK9iOi78HYYyYKlGmSxp8fKKWEgKqElm846Uiggi6CZ1ElDh0aDGKqCbBdCr_DsGtFTg4O1xL3gIaX21VsDBBS0TlNlEUrQDMdkMiJH7Bmb4ArBECQmBwon_"/></button></div></div></header><main class="flex flex-col relative w-full pt-20 pb-24 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="flex flex-col gap-space-lg px-margin pb-6">
+<!-- Search & Smart Camera Scanner Hero Tile -->
+<div class="flex flex-col gap-space-sm pt-2">
+<div class="flex items-center justify-between">
+<div>
+<span class="font-headline-lg-mobile text-headline-lg-mobile text-on-surface">Guia Rápido Eco</span>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Descarte correto e ecopontos oficiais em Curitiba</p>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container/60 text-on-secondary-container px-2.5 py-1 rounded-full">
+<span class="material-symbols-outlined text-[16px]">verified</span>
+<span class="font-label-sm text-label-sm">Padrão CONAMA</span>
+</div>
+</div>
+<!-- Search Input Container -->
+<div class="relative w-full shadow-sm rounded-xl">
+<span class="material-symbols-outlined absolute left-3.5 top-3.5 text-outline text-[20px]">search</span>
+<input class="w-full h-12 pl-10 pr-12 rounded-xl bg-surface-container-lowest text-on-surface placeholder:text-outline font-body-md text-body-md focus:outline-none focus:ring-2 focus:ring-primary shadow-sm" id="wasteSearchInput" placeholder="O que você quer descartar? (ex: espelho, pilhas, remédio...)" type="text"/>
+<button aria-label="Limpar busca" class="hidden absolute right-3 top-3 w-6 h-6 rounded-full bg-surface-container flex items-center justify-center text-outline hover:text-on-surface" id="clearSearchBtn">
+<span class="material-symbols-outlined text-[16px]">close</span>
+</button>
+</div>
+<!-- Quick Interactive Filter Chips -->
+<div class="flex gap-space-xs overflow-x-auto pb-1 -mx-margin px-margin">
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" data-category="all">
+<span class="material-symbols-outlined text-[16px]">apps</span>
+          Todos
+        </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" data-category="reciclavel">
+<span class="w-2 h-2 rounded-full bg-primary-container"></span>
+          Recicláveis
+        </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" data-category="especial">
+<span class="w-2 h-2 rounded-full bg-tertiary-container"></span>
+          Especiais / Ecoponto
+        </button>
+<button class="filter-pill flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-surface-container-low text-on-surface font-label-sm text-label-sm shrink-0 active:scale-95 transition-transform" data-category="organico">
+<span class="w-2 h-2 rounded-full bg-on-tertiary-container"></span>
+          Compostagem
+        </button>
+</div>
+<!-- Scanner Action Banner -->
+<div class="relative overflow-hidden rounded-xl bg-gradient-to-r from-primary to-secondary p-space-md text-on-primary shadow-md">
+<div class="absolute -right-4 -bottom-6 opacity-15 pointer-events-none">
+<span class="material-symbols-outlined text-[110px]">qr_code_scanner</span>
+</div>
+<div class="relative z-10 flex items-center justify-between gap-space-sm">
+<div class="flex flex-col gap-0.5 max-w-[70%]">
+<div class="flex items-center gap-1 text-primary-fixed font-label-sm text-label-sm uppercase tracking-wider">
+<span class="material-symbols-outlined text-[14px]">auto_awesome</span>
+<span>Reconhecimento IA</span>
+</div>
+<span class="font-headline-sm text-headline-sm">Dúvida na embalagem?</span>
+<p class="font-body-sm text-body-sm opacity-90">Aponte a câmera para o código de barras ou símbolo de reciclagem.</p>
+</div>
+<button aria-label="Abrir Scanner Eco" class="flex flex-col items-center justify-center w-14 h-14 rounded-full bg-primary-fixed text-on-primary-fixed shadow-md active:translate-y-1 transition-all shrink-0" id="openScannerBtn">
+<span class="material-symbols-outlined text-[26px]">center_focus_strong</span>
+<span class="font-label-sm text-[9px] uppercase font-bold tracking-tight">Scan</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Official Waste Categories (CONAMA Color-Coded Cards) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">palette</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Cores Oficiais de Coleta</h2>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant">6 categorias</span>
+</div>
+<div class="grid grid-cols-2 gap-space-sm">
+<!-- Papel & Papelão (Azul CONAMA) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container-highest flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[24px]">description</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container px-2 py-0.5 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+              Azul
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Papel &amp; Papelão</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">42 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-primary font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Plásticos & Isopor (Vermelho CONAMA) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-error-container/60 flex items-center justify-center text-error">
+<span class="material-symbols-outlined text-[24px]">water_bottle</span>
+</div>
+<div class="flex items-center gap-1 bg-error-container/40 px-2 py-0.5 rounded-full text-on-error-container font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+              Vermelho
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Plásticos &amp; Isopor</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">68 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Vidros (Verde CONAMA) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary-container/70 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[24px]">local_bar</span>
+</div>
+<div class="flex items-center gap-1 bg-secondary-container/50 px-2 py-0.5 rounded-full text-on-secondary-fixed-variant font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+              Verde
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Vidros</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">25 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-secondary font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Metais & Latinhas (Amarelo CONAMA) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed/60 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">sports_bar</span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-fixed/40 px-2 py-0.5 rounded-full text-on-tertiary-fixed font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary-container"></span>
+              Amarelo
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Metais &amp; Latinhas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">31 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Orgânicos & Compostagem (Marrom CONAMA) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-on-surface-variant">
+<span class="material-symbols-outlined text-[24px]">compost</span>
+</div>
+<div class="flex items-center gap-1 bg-surface-container-high px-2 py-0.5 rounded-full text-on-surface font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-on-tertiary-container"></span>
+              Marrom
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Orgânicos</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">50 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-on-surface-variant font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+<!-- Eletrônicos & Pilhas (Laranja / Logística Reversa) -->
+<div class="category-card flex flex-col justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow cursor-pointer active:scale-[0.98]">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-tertiary-fixed-dim/40 flex items-center justify-center text-tertiary">
+<span class="material-symbols-outlined text-[24px]">battery_charging_full</span>
+</div>
+<div class="flex items-center gap-1 bg-tertiary-fixed/60 px-2 py-0.5 rounded-full text-on-tertiary-fixed-variant font-label-sm text-label-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-tertiary"></span>
+              Especial
+            </div>
+</div>
+<div class="flex flex-col gap-0.5 mt-3">
+<span class="font-label-lg text-label-lg text-on-surface">Eletrônicos &amp; Pilhas</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">18 itens cadastrados</span>
+</div>
+<div class="mt-2 pt-2 flex items-center justify-between text-tertiary font-label-sm text-label-sm">
+<span>Ver regras</span>
+<span class="material-symbols-outlined text-[14px]">arrow_forward</span>
+</div>
+</div>
+</div>
+</div>
+<!-- FAQ & Erros Comuns (Mitos de Reciclagem) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-tertiary text-[20px]">help_center</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Dúvidas &amp; Erros Comuns</h2>
+</div>
+<span class="font-label-sm text-label-sm text-primary">Evite contaminações</span>
+</div>
+<div class="flex flex-col gap-space-xs">
+<!-- Pergunta 1: Espelho -->
+<div class="accordion-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-error text-[20px] shrink-0 mt-0.5">cancel</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Espelho quebrado vai na lixeira de vidro?</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-error-container/70 text-on-error-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                    Não! É rejeito comum
+                  </span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] accordion-chevron transition-transform">expand_more</span>
+</div>
+<div class="accordion-body hidden mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-1.5">
+<p>Os espelhos contêm uma película de prata e produtos químicos que impedem sua fusão com o vidro comum (garrafas e potes). Descarte embrulhado em jornal ou caixa no lixo comum ou encaminhe a um ecoponto.</p>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[15px]">tips_and_updates</span>
+              Dica: Sempre embale para proteger os garis e catadores.
+            </div>
+</div>
+</div>
+<!-- Pergunta 2: Caixa de Pizza -->
+<div class="accordion-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-tertiary text-[20px] shrink-0 mt-0.5">change_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Caixa de pizza engordurada pode ser reciclada?</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-tertiary-fixed/60 text-on-tertiary-fixed font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                    Apenas partes limpas
+                  </span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] accordion-chevron transition-transform">expand_more</span>
+</div>
+<div class="accordion-body hidden mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-1.5">
+<p>A gordura do queijo e do molho não se mistura com a água do processo de reciclagem do papel. Rasgue a tampa se estiver limpa e coloque no papel (Azul); o fundo sujo vai para o lixo comum ou compostagem.</p>
+</div>
+</div>
+<!-- Pergunta 3: Isopor -->
+<div class="accordion-item rounded-xl bg-surface-container-lowest p-space-md shadow-sm transition-all cursor-pointer">
+<div class="flex items-start justify-between gap-space-sm">
+<div class="flex items-start gap-space-sm min-w-0">
+<span class="material-symbols-outlined text-primary text-[20px] shrink-0 mt-0.5">check_circle</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-md text-label-md text-on-surface">Isopor é reciclável no lixo plástico?</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="bg-secondary-container/70 text-on-secondary-container font-label-sm text-label-sm px-2 py-0.5 rounded-full font-bold">
+                    Sim! É 100% plástico
+                  </span>
+</div>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline text-[18px] accordion-chevron transition-transform">expand_more</span>
+</div>
+<div class="accordion-body hidden mt-3 pt-2 text-on-surface-variant font-body-sm text-body-sm flex flex-col gap-1.5">
+<p>O poliestireno expandido (EPS/Isopor) é um tipo de plástico. Lave ligeiramente para tirar restos de alimento e jogue no latão Vermelho de plásticos ou entregue nos ecopontos.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Ecopontos Próximos de Você (Curitiba Geo Hub) -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-primary text-[20px]">near_me</span>
+<h2 class="font-headline-sm text-headline-sm text-on-surface">Ecopontos Próximos</h2>
+</div>
+<div class="flex items-center gap-1 text-secondary font-label-sm text-label-sm">
+<span class="material-symbols-outlined text-[14px]">my_location</span>
+          GPS Ativo
+        </div>
+</div>
+<!-- Mini Map Visual Anchor with Static Location Fallback -->
+<div class="relative w-full h-36 rounded-xl overflow-hidden shadow-sm">
+<div class="w-full h-full bg-cover bg-center" data-location="Curitiba, Jardim Botanico, PR, Brasil" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuBrRB1Gy0b-LBy_ozCnZxdONnjp4OsUpY-HHDwY03EHw2X6SkdgQ7geNY8lp4WGMuk2WRJRVKEqZbIAR0HgcPjKG7L-ojwmWS8l0U49UCze_sumrLUmcKWaxd5j0coGvZ8qs0935bs60EBswskT_RLybAPqOZNDtqRpa72LU8kBJVmz_Fbzw8UykMu3J5JuZz0Ju2ZJIMff-vRax5FEErWe2A6GPlQ0Zssuz6ImOzubQRVt-h2qx8pm')"></div>
+<div class="absolute inset-0 bg-gradient-to-t from-inverse-surface/80 via-transparent to-transparent flex items-end p-space-sm">
+<div class="flex items-center justify-between w-full text-inverse-on-surface">
+<div class="flex items-center gap-1.5">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm">Você está a 1.2 km do ponto mais próximo</span>
+</div>
+<span class="bg-surface-container-lowest/20 backdrop-blur-md px-2 py-0.5 rounded text-[10px] font-bold">SMMA Curitiba</span>
+</div>
+</div>
+</div>
+<!-- List of nearest points -->
+<div class="flex flex-col gap-space-xs">
+<!-- Ponto 1 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-secondary-container/60 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">recycling</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Ecoponto Jardim Botânico</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rua Engenheiro Ostoja Roguski, s/n</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold">1.2 km</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Aberto até às 18h</span>
+</div>
+</div>
+</div>
+<button aria-label="Navegar até o Ecoponto Jardim Botânico" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+</button>
+</div>
+<!-- Ponto 2 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-tertiary-fixed/50 text-tertiary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">ev_station</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Ponto E-Lixo Prado Velho</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Rua Guabirotuba, 600</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold">2.8 km</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-tertiary font-medium">Eletrônicos &amp; Pilhas</span>
+</div>
+</div>
+</div>
+<button aria-label="Navegar até o Ponto E-Lixo Prado Velho" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+</button>
+</div>
+<!-- Ponto 3 -->
+<div class="flex items-center justify-between p-space-md rounded-xl bg-surface-container-lowest shadow-sm hover:shadow-md transition-shadow">
+<div class="flex items-start gap-space-sm min-w-0">
+<div class="w-10 h-10 rounded-full bg-surface-container-highest text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[20px]">medication</span>
+</div>
+<div class="flex flex-col min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md text-on-surface truncate">Descarte Medicamentos - UBS Matriz</span>
+</div>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate">Praça Rui Barbosa, s/n</span>
+<div class="flex items-center gap-2 mt-1">
+<span class="font-label-sm text-label-sm text-secondary font-bold">3.4 km</span>
+<span class="text-outline text-body-sm">•</span>
+<span class="font-body-sm text-body-sm text-secondary font-medium">Aberto até 17h</span>
+</div>
+</div>
+</div>
+<button aria-label="Navegar até a UBS Matriz" class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary active:scale-95 transition-transform shrink-0">
+<span class="material-symbols-outlined text-[20px]">directions</span>
+</button>
+</div>
+</div>
+<!-- Action Button: Full Collection Map -->
+<button class="w-full h-14 rounded-full bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-space-sm shadow-md active:translate-y-1 transition-all" id="fullMapBtn" style="box-shadow: 0 4px 0 #00422b;">
+<span class="material-symbols-outlined text-[22px]">map</span>
+<span>Ver Mapa Completo de Coleta</span>
+</button>
+<!-- Local Municipal Recycling Calendar Alert -->
+<div class="flex items-center gap-space-sm p-space-sm rounded-xl bg-surface-container-low text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-[22px] shrink-0">local_shipping</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm text-on-surface">Caminhão do Lixo Que Não É Lixo</span>
+<span class="font-body-sm text-body-sm">Próxima passagem no seu bairro: <strong>Amanhã às 08h30</strong></span>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive Camera Scanner Modal Overlay (Hidden by Default) -->
+<div class="hidden fixed inset-0 z-50 bg-inverse-surface/90 backdrop-blur-md flex flex-col justify-between p-margin pb-safe" id="scannerModal">
+<div class="flex items-center justify-between text-inverse-on-surface pt-4">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary-fixed">qr_code_scanner</span>
+<span class="font-headline-sm text-headline-sm">Scanner Eco</span>
+</div>
+<button aria-label="Fechar scanner" class="w-10 h-10 rounded-full bg-inverse-surface/60 text-inverse-on-surface flex items-center justify-center" id="closeScannerBtn">
+<span class="material-symbols-outlined">close</span>
+</button>
+</div>
+<!-- Viewfinder Area -->
+<div class="relative flex flex-col items-center justify-center my-auto">
+<div class="relative w-64 h-64 rounded-2xl overflow-hidden bg-black/40 flex items-center justify-center shadow-2xl">
+<div class="absolute inset-0 border-4 border-dashed border-primary-fixed/80 rounded-2xl animate-pulse"></div>
+<div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-transparent via-primary-fixed to-transparent shadow-glow" id="scanLaserLine"></div>
+<img class="w-full h-full object-cover opacity-60" data-alt="Close up photograph of a barcode on an eco-friendly recyclable cardboard milk package held in a citizen hand ready for municipal scanning." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQa8BRYU3w1jiuN1aYTNLBwNFGFOVjlvoN6nmIhbARz6szWjzQ_6VfBke1RKLQhDFK4uIS1TuFZ-v-olqtI8Mv0a2Snp1eqIUrt6gD-mLOwJEJBZx4TjWzEeWKdDh_bcWgrfhhGst7AhyAlaA75R-J7upT01Y93NE0NSiVM7HZSUfur0q0MOzjXqghkvLn7MxsCuYX7_2Zuq16ux70r34gQdVE5CP5yuoXyFJ8usi6gUAo8ENueluu"/>
+<span class="absolute bottom-4 font-label-sm text-label-sm text-inverse-on-surface bg-inverse-surface/75 px-3 py-1 rounded-full">Alinhe o rótulo ou código</span>
+</div>
+<p class="mt-4 font-body-sm text-body-sm text-inverse-on-surface/80 text-center max-w-xs">
+        Identificamos automaticamente o material e calculamos pontos para o ranking de Curitiba.
+      </p>
+</div>
+<!-- Scanner Controls -->
+<div class="flex flex-col gap-space-sm items-center pb-6">
+<button class="w-full h-14 rounded-full bg-primary-container text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 shadow-lg active:scale-95 transition-transform" id="simulateScanBtn">
+<span class="material-symbols-outlined text-[20px]">photo_camera</span>
+        Capturar e Identificar
+      </button>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/60">Ou digite o nome na busca rápida</span>
+</div>
+</div>
+<!-- Toast Feedback Element -->
+<div class="hidden fixed bottom-20 left-4 right-4 z-50 bg-inverse-surface text-inverse-on-surface p-3 rounded-xl shadow-xl flex items-center gap-3 transition-opacity" id="toastNotification">
+<span class="material-symbols-outlined text-primary-fixed text-[24px]">task_alt</span>
+<div class="flex flex-col min-w-0">
+<span class="font-label-sm text-label-sm" id="toastTitle">Item Identificado: Garrafa PET</span>
+<span class="font-body-sm text-body-sm text-inverse-on-surface/80" id="toastDesc">Descarte na lixeira Vermelha (Plásticos). +10 EcoPontos!</span>
+</div>
+</div>
+</div>
+<script>
+  // Accordion Logic for Dúvidas Comuns
+  document.querySelectorAll('.accordion-item').forEach(item => {
+    item.addEventListener('click', () => {
+      const body = item.querySelector('.accordion-body');
+      const chevron = item.querySelector('.accordion-chevron');
+      const isHidden = body.classList.contains('hidden');
+      
+      // Close open accordions
+      document.querySelectorAll('.accordion-body').forEach(b => b.classList.add('hidden'));
+      document.querySelectorAll('.accordion-chevron').forEach(c => c.classList.remove('rotate-180'));
+
+      if (isHidden) {
+        body.classList.remove('hidden');
+        chevron.classList.add('rotate-180');
+      }
+    });
+  });
+
+  // Search input feedback and clear button
+  const wasteInput = document.getElementById('wasteSearchInput');
+  const clearBtn = document.getElementById('clearSearchBtn');
+
+  wasteInput.addEventListener('input', (e) => {
+    if (e.target.value.trim().length > 0) {
+      clearBtn.classList.remove('hidden');
+    } else {
+      clearBtn.classList.add('hidden');
+    }
+  });
+
+  clearBtn.addEventListener('click', () => {
+    wasteInput.value = '';
+    clearBtn.classList.add('hidden');
+    wasteInput.focus();
+  });
+
+  // Scanner modal triggers
+  const scannerModal = document.getElementById('scannerModal');
+  const openScannerBtn = document.getElementById('openScannerBtn');
+  const closeScannerBtn = document.getElementById('closeScannerBtn');
+  const simulateScanBtn = document.getElementById('simulateScanBtn');
+  const toast = document.getElementById('toastNotification');
+
+  openScannerBtn.addEventListener('click', () => {
+    scannerModal.classList.remove('hidden');
+  });
+
+  closeScannerBtn.addEventListener('click', () => {
+    scannerModal.classList.add('hidden');
+  });
+
+  simulateScanBtn.addEventListener('click', () => {
+    scannerModal.classList.add('hidden');
+    // Display rewarding toast
+    toast.classList.remove('hidden');
+    setTimeout(() => {
+      toast.classList.add('hidden');
+    }, 4500);
+  });
+
+  // Filter chips mock interaction
+  const filterPills = document.querySelectorAll('.filter-pill');
+  filterPills.forEach(pill => {
+    pill.addEventListener('click', () => {
+      filterPills.forEach(p => {
+        p.classList.remove('bg-primary', 'text-on-primary');
+        p.classList.add('bg-surface-container-low', 'text-on-surface');
+      });
+      pill.classList.remove('bg-surface-container-low', 'text-on-surface');
+      pill.classList.add('bg-primary', 'text-on-primary');
+    });
+  });
+</script></main><nav class="fixed bottom-0 w-full z-50 pb-safe bg-surface-container-lowest/90 backdrop-blur-xl shadow-[0_-2px_12px_rgba(0,0,0,0.06)]" data-active-classes="text-primary font-bold"><div class="flex justify-around items-center h-16 px-space-xs"><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors hover:text-on-surface" data-path="inicio" href="#"><span class="material-symbols-outlined text-[22px]">eco</span><span class="font-label-sm text-label-sm">Início</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors hover:text-on-surface" data-path="quiz" href="#"><span class="material-symbols-outlined text-[22px]">sports_esports</span><span class="font-label-sm text-label-sm">Quiz</span></a><a class="flex flex-col items-center justify-center gap-1 w-16 h-14 text-on-surface-variant transition-colors hover:text-on-surface" data-path="ranking" href="#"><span class="material-symbols-outlined text-[22px]">trophy</span><span class="font-label-sm text-label-sm">Ranking</span></a><a aria-current="page" class="flex flex-col items-center justify-center gap-1 w-16 h-14 transition-colors text-primary font-bold" data-path="guia-eco" href="#"><span class="material-symbols-outlined text-[22px]">recycling</span><span class="font-label-sm text-label-sm">Guia Eco</span></a></div></nav></body></html>
